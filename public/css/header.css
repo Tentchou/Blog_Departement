@@ -1,0 +1,320 @@
+header{
+    position: sticky;
+    width: 100%;
+    box-shadow: 0px 0px 7px 0px;
+    background-color: white;
+    top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+}
+header #petitLien{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+header #petitLien a{
+    text-decoration: none;
+    font-size: 14px;
+}
+header #mainHead{
+    display: grid;
+    grid-template-columns: repeat(2,1fr,0px);
+    grid-template-rows: repeat(1);
+}
+header #mainHead img{
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+
+}
+header #mainHead .grand{
+    font-size: 24px;
+}
+#mainHead .marque{
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -15px;
+}
+header .connextion {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    justify-content: right;
+    padding-top: 12px;
+    padding-right: 30px;
+}
+header .connextion .hid{
+    display: none;
+    font-size: 40px;
+    color: var(--bleu-turquois);
+    cursor: pointer;
+}
+header .connextion button{
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 170px;
+    margin-right: 20px;
+}
+header .connextion button:hover{
+    background-color: var(--bleu-fonce);
+    color: white;
+    border: 1px solid var(--bleu-fonce);
+}
+
+/* active menu */
+
+
+
+
+/* Definition du meneu */
+header #menu{
+    width: 100%;
+    height: 50px;
+    background-color: #0d6efd;
+    color: white;
+    font-weight: bolder !important;
+}
+header #menu li {
+    list-style:none ;
+    color:white;
+    padding:10px;
+    font-size:5px;
+    text-decoration:none;
+    height: 50px;
+}
+header #menu nav ul {
+    background-color:#0d6efd;
+    padding:0;
+    margin:0;
+}
+header #menu nav ul li {
+    list-style: none;
+    line-height:30px;
+    float:left;
+    background-color:#0d6efd;
+    }
+header #menu nav ul li a {
+    color:#FFF;
+    padding:5px;
+    font-size:16px;
+    text-decoration:none;
+    }
+header #menu nav ul li:hover{
+    background-color: var(--bleu-fonce);
+}
+
+.nav-link.active{
+    background-color: var(--bleu-fonce);
+    color:#FFF;
+    padding:10px;
+    font-size:16px;
+    text-decoration:none;
+}
+header #menu li a:hover {
+    border-bottom:3px #FFF solid;
+}
+header #menu nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+header #menu nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+    z-index:99999;
+    display:list-item !important;
+    margin-top:0px;
+    margin-left:-10px;
+    }
+header #menu nav ul li:hover ul li {
+    float:none;
+}
+/*  Gestiion de la sidebar masqué en responsive */
+.sidebar *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--indigo);
+    padding: 6px 0px;
+    z-index: 1999;
+    display: none;
+  }
+  .sidebar.open{
+    width: 250px;
+    animation-name: op;
+    animation-duration: 0.7s;
+  }
+  .sidebar .logo-details{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .sidebar .logo-details .icon{
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar .logo-details .logo_name{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .sidebar.open .logo-details .icon,
+  .sidebar.open .logo-details .logo_name{
+    opacity: 1;
+  }
+  .sidebar.open .logo-details #btn2{
+    text-align: right;
+  }
+  .sidebar i{
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+  }
+  .sidebar .nav-list{
+    margin-top: 20px;
+    height: 100%;
+  }
+  .sidebar li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+  }
+  .sidebar li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: var(--indigo);
+  }
+  .sidebar li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+  }
+  .sidebar.open li a .links_name{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sidebar li i{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .sidebar li.profile{
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #1d1b31;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .sidebar.open li.profile{
+    width: 250px;
+  }
+  .sidebar li .profile-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .sidebar li img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  .sidebar li.profile .name,
+  .sidebar li.profile .adrr{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .sidebar li.profile .adrr{
+    font-size: 12px;
+  }
+  .sidebar .profile #log_out{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #1d1b31;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+  }
+  .sidebar.open .profile #log_out{
+    width: 50px;
+    background: none;
+  }
+@media (max-width:500px) or (max-height:500px) {
+    header{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    header .connextion button{
+        display: none;
+    }
+    header #mainHead .grand{
+        font-size: 20px;
+    }
+    header #mainHead img{
+        width: 80px;
+        height: 80px;
+    }
+    #mainHead .marque{
+        top: 0px;
+    }
+    header .connextion{
+        padding-right: 5px;
+    }
+    header .connextion .hid{
+        display: block;
+
+    }
+    header #menu{
+        display: none;
+    }
+    header #petitLien{
+        display: none;
+    }
+    header .sidebar.open{
+        display: block;
+    }
+}
+@keyframes op {
+    from{
+        width: 0;
+        display: none;
+    }
+    to{
+        width: 250px;
+        display: block;
+    }
+
+}

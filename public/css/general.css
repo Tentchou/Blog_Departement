@@ -1,0 +1,69 @@
+/* Modifier toute les balises de la page et leur placeholder  et les liens*/
+*, *::placeholder{
+    font-family: Bookman Old Style !important;
+    font-weight: lighter;
+}
+*::placeholder{
+    color: var(--bleu-turquois);
+    text-align: right;
+}
+*:link,a{
+    color: var(--bleu-turquois); /* Faire en sorte qu tout les liens ait la couleur bleu*/
+}
+
+/* Toute mes constante utilisé dans la page */
+:root{
+    --bleu:#4B70F5;
+    --bleu-fonce:#4C3BCF;
+    --bleu-turquois:#0d6efd;
+    --indigo:#402E7A;
+    --bleu-clair:#F8FDFF;
+    --shadow:0px 0px 5px 0px; /* Ombre derrièles div*/
+}
+
+/* Modifier des balise en particulier */
+body{
+    font-size: 16px;
+    overflow-x: hidden;
+}
+header{
+    z-index: 2000; /* Les élément placé dans le header auront un z-index  a partir de 2000*/
+    margin-bottom: 30px;
+    position: sticky;
+}
+main{
+    z-index: 1; /* Les élément placé dans le main auront un z-index 1 et 1999*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Classe et identifiant css générale */
+.boutton{
+    border: 1px solid var(--bleu);
+}
+.foncee{
+    background-color: var(--bleu);
+    color: white;
+}
+.boutton:hover{
+    background-color: var(--bleu-fonce);
+    border-color: var(--bleu-fonce);
+}
+.clair{
+    background-color: white;
+}
+#principale{
+    padding: 0px 0px 0px 20px;
+    width: 72%;
+}
+/* enlever la propietecidessous si elle vous gène */
+img{
+    border-radius: 10px;
+}
+@media screen and ((max-width:500px) or (max-height:500px)) {
+    #principale {
+        padding: 0px 0px 0px 10px;
+        width: 100%;
+    }
+}

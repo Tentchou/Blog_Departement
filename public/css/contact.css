@@ -1,0 +1,251 @@
+#map {
+    margin-top: 50px;
+    width: 100%;
+    height: 540px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inscription-container {
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%,-40%);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #map {
+        height: 300px;
+    }
+    .inscription-container{
+        width: 90%;
+        height: 120%;
+    }
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Alignement horizontal des éléments */
+    flex-direction: row;
+}
+
+/* Style pour la carte Google Maps */
+.map {
+    width: 30%;
+    height: auto;
+    border-right: 1px solid #ccc;
+}
+
+/* alert success */
+.alert-success {
+    display: flex;
+    align-items: center;
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #155724;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 10rem auto;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.alert-success .icon {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #28a745;
+}
+
+.alert-success .message {
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.alert-success .close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #155724;
+}
+
+.alert-success .close-btn:hover {
+    color: #28a745;
+}
+
+/* Responsiveness - version mobile */
+@media screen and (max-width: 600px) {
+    .alert-success {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .alert-success .icon {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .alert-success .message {
+        font-size: 14px;
+    }
+
+    .alert-success .close-btn {
+        font-size: 18px;
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+/* fin alert success */
+
+/* Style pour le formulaire de contact */
+.form-container {
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h1 {
+    margin-bottom: 30px;
+    font-size: 34px;
+    color: #333;
+    margin-top: -30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #218838;
+}
+
+/* Style pour la section "Nous contacter" */
+.contact-info {
+    width: 30%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-info .phone-number {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.contact-info .icon {
+    margin-right: 10px;
+}
+
+/* Responsiveness - Ajuster pour les écrans plus petits */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .map, .form-container, .contact-info {
+        width: 100%;
+        border-right: none;
+        border-left: none;
+    }
+
+    .form-container, .contact-info {
+        padding: 20px;
+    }
+
+    .map {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+
+    .contact-info h2 {
+        font-size: 20px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+    }
+}

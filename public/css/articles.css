@@ -1,0 +1,335 @@
+        /* Votre CSS ici */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+               /* alert success */
+.alert-overlay {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Assure que l'alerte est au-dessus de tous les autres éléments */
+    width: 80%; /* Largeur de l'alerte */
+    max-width: 600px; /* Limite la largeur maximale */
+}
+
+/* Ombre douce pour rendre l'alerte plus visible */
+.alert {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'apparition (facultatif) */
+.alert {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* projects */
+
+/* Custom styles for the page */
+
+/* Hero Section (carousel) */
+#hero {
+    margin-bottom: 30px;
+}
+
+#carouselHero .carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+}
+
+/* Adjust carousel captions for smaller screens */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    .carousel-caption a.btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Projects Section */
+#projects .card {
+    transition: all 0.3s ease;
+}
+#projects .card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+/* fin projects */
+
+        /* categories
+        /* Style pour la div des catégories */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #0056b3;
+}
+
+.category-item {
+    margin: 0 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    text-decoration: underline;
+}
+
+ /* fin categories */
+
+ /* formulaire recherche */
+
+ .container form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 30px; /* Bord arrondi */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+
+
+/* fin recherche */
+
+/* Style pour le nombre d'articles dans les catégories */
+.category-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #0056b3;
+}
+
+.category-count {
+    font-size: 0.9rem;
+    color: #f8f9fa;
+    margin-left: 10px;
+}
+
+
+
+       /* Style pour la sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #f8f9fa;
+    border-left: 1px solid #ddd;
+    overflow-y: auto;
+    z-index: 0;
+    margin-top: 40px;
+}
+
+.sidebar-title {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar-content {
+    padding: 15px;
+}
+
+.category-button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustements pour la main-content */
+.main-content {
+    margin-right: 250px; /* Adjust margin to match sidebar width */
+}
+
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            max-width: 1800px;
+            width: calc(100% - 250px);
+            box-sizing: border-box;
+        }
+
+        .card-custom {
+            display: flex;
+            align-items: stretch;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1400px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .card-img {
+            width: 400px;
+            height: auto;
+            object-fit: cover;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .card-body-custom {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .card-text {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: #007bff;
+            font-style: italic;
+        }
+
+        .card-button {
+            display: block;
+            width: 120px;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.5s ease;
+        }
+
+        .card-button:hover {
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .card-custom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 115%;
+                margin-right: 2px;
+            }
+
+            .card-img {
+                width: 114%;
+                max-width: 350px;
+                margin-bottom: 15px;
+                height: auto;
+                margin-right: -4px;
+            }
+
+            .card-body-custom {
+                text-align: left;
+            }
+
+            .card-button {
+                width: 100%;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .card-meta {
+                font-size: 0.85rem;
+            }
+        }
+
+
